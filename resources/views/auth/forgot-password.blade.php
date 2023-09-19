@@ -39,7 +39,7 @@
                                         </div>
 
                                 <div class="form-group">
-                                    <x-text-input  id="email" class="form-control block mt-1 w-full" placeholder="{{Lang::get('MyCustom.placeholder_Email')}}" type="email" name="email" :value="old('email')" required/>
+                                    <x-text-input  id="email" style="border-radius: 1rem;" class="form-control block mt-1 w-full" placeholder="{{Lang::get('MyCustom.placeholder_Email')}}" type="email" name="email" :value="old('email')" required/>
                                     <x-input-error :messages="$errors->get('email')" class="text-danger " />
                                 </div>
                                 <x-auth-session-status class="mb-4" :status="session('status')" />

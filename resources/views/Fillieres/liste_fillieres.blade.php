@@ -164,15 +164,42 @@
     }
 </script>
 @if (session()->has('success'))
-<!-- Show a success message using SweetAlert when needed -->
 <script>
     Swal.fire({
         position: 'top-end',
         icon: 'success',
         title: "{{ session()->get('success') }}",
-        showConfirmButton: false,
-        timer: 1500
+        showConfirmButton: true,
+        timer: 4000
     });
 </script>
 @endif
+<!--****************************************************-->
+@if (session()->has('error'))
+<!-- Show an error message using SweetAlert when needed -->
+<script>
+    Swal.fire({
+        icon: 'error',
+        position: 'top-end',
+        title: "{{ session()->get('error') }}",
+        showConfirmButton: true,
+        timer: 5000
+
+    });
+</script>
+@endif
+@if (session()->has('info'))
+<!-- Show an error message using SweetAlert when needed -->
+<script>
+    Swal.fire({
+        icon: 'info',
+        position: 'top-end',
+        title: "{{ session()->get('info') }}",
+        showConfirmButton: true,
+        timer: 5000
+
+    });
+</script>
+@endif
+
 @endsection

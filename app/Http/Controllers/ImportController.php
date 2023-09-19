@@ -34,8 +34,8 @@ class ImportController extends Controller
 
             return redirect()->back()->with('success', 'Data imported successfully.');
         } catch (\Exception $e){
-            echo $e->getMessage();
-           //return redirect()->back()->with('error', 'An error occurred while importing the data.');
+            //echo $e->getMessage();
+           return redirect()->back()->with('error', 'An error occurred while importing the data.');
         }
     }
 }

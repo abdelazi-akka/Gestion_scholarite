@@ -15,9 +15,10 @@ return new class extends Migration
         Schema::create('fillieres', function (Blueprint $table) {
             $table->id("id_filliere");
             $table->string("intitule_filliere");
-            $table->string("code_filliere")->unique();
+            $table->string("code_filliere");
             $table->string("cin");
             $table->foreign("cin")->references("cin")->on("users")->onDelete("cascade")->onUpdate("cascade");
+            $table->unique(["code_filliere","cin"]);
             $table->timestamps();
         });
     }

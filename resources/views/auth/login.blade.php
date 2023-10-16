@@ -20,11 +20,11 @@
                                     <p class="login-p">{{__('MyCustom.Please_Login')}}.</p>
                                 </div>
                                 <div class="form-group">
-                                    <x-text-input  id="email" class="form-control block mt-1 w-full" placeholder="{{Lang::get('MyCustom.placeholder_Email')}}" type="email" name="email" :value="old('email')" required/>
+                                    <x-text-input  id="email" class="form-control block mt-1 w-full" style="border-radius: 1rem;" placeholder="{{Lang::get('MyCustom.placeholder_Email')}}" type="email" name="email" :value="old('email')" required/>
                                     <x-input-error :messages="$errors->get('email')" class="text-danger " />
                                 </div>
                                 <div class="form-group">
-                                    <x-text-input id="password" class="form-control block  w-full" type="password" placeholder="{{Lang::get('MyCustom.placeholder_Password')}}" name="password" :value="old('email')" required />
+                                    <x-text-input id="password" class="form-control block  w-full" style="border-radius: 1rem;" type="password" placeholder="{{Lang::get('MyCustom.placeholder_Password')}}" name="password" :value="old('email')" required />
                                     <x-input-error :messages="$errors->get('password')" class="text-danger" />
                                 </div>
                                 <x-auth-session-status class="my-2" :status="session('status')" />

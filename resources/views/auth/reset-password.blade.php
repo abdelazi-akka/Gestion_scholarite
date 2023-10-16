@@ -50,15 +50,15 @@
                             <div class="col-md-6">
                                 <div class="login-box">
                                     <div class="form-group">
-                                        <x-text-input  id="email" class="form-control block mt-1 w-full" placeholder="{{Lang::get('MyCustom.Email')}}" type="email" name="email" :value="old('email', $request->email)" required/>
+                                        <x-text-input  id="email" style="border-radius: 1rem;" class="form-control block mt-1 w-full" placeholder="{{Lang::get('MyCustom.Email')}}" type="email" name="email" :value="old('email', $request->email)" required/>
                                         <x-input-error :messages="$errors->get('email')" class="text-danger " />
                                     </div>
                                     <div class="form-group">
-                                        <x-text-input id="password" class="form-control block  w-full" type="password" placeholder="{{Lang::get('MyCustom.Password')}}" name="password" :value="old('email')" required />
+                                        <x-text-input id="password" style="border-radius: 1rem;" class="form-control block  w-full" type="password" placeholder="{{Lang::get('MyCustom.Password')}}" name="password" :value="old('email')" required />
                                         <x-input-error :messages="$errors->get('password')" class="text-danger" />
                                     </div>
                                     <div class="form-group">
-                                        <x-text-input id="password" class="form-control block w-full" type="password" placeholder="{{Lang::get('MyCustom.Confirme_Password')}}" name="password_confirmation"  required />
+                                        <x-text-input id="password" style="border-radius: 1rem;" class="form-control block w-full" type="password" placeholder="{{Lang::get('MyCustom.Confirme_Password')}}" name="password_confirmation"  required />
                                         <x-input-error :messages="$errors->get('password_confirmation')" class="text-danger" />
                                     </div>
                                     <x-primary-button class="btn btn-primary w-100">
